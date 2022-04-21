@@ -1,17 +1,21 @@
-# axobotl
-Bot programado em elixir para um trabalho de programação funcional
+# Axobotl
 
-## TODO
-### Commands
-- !axobotl {pictures|facts} (E)
-- !catfact * (N)
-- !catchcat * (N)
-- !owo {} (E)
-- !wiki {} (N)
-- !rsits {chinese chatacter} (E)
-- !hello {@} (E)
-- !m * (E)
-- !4ch * (N)
-- !stalk {@} (N)
-  
-- !pdf * (N)
+**TODO: Add description**
+
+## Installation
+
+If [available in Hex](https://hex.pm/docs/publish), the package can be installed
+by adding `axobotl` to your list of dependencies in `mix.exs`:
+
+```elixir
+def deps do
+  [
+    {:axobotl, "~> 0.1.0"}
+  ]
+end
+```
+
+Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
+and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
+be found at [https://hexdocs.pm/axobotl](https://hexdocs.pm/axobotl).
+
