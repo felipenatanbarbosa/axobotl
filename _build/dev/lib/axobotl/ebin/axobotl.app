@@ -1,6 +1,9 @@
 {application,axobotl,
-             [{applications,[kernel,stdlib,elixir,logger]},
+             [{applications,[kernel,stdlib,elixir,logger,httpoison,nostrum,
+                             poison]},
               {description,"axobotl"},
-              {modules,['Elixir.Axobotl']},
+              {modules,['Elixir.Axobotl','Elixir.Axobotl.Application',
+                        'Elixir.Axobotl.Consumer']},
               {registered,[]},
-              {vsn,"0.1.0"}]}.
+              {vsn,"0.1.0"},
+              {mod,{'Elixir.Axobotl.Application',[]}}]}.
