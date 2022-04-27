@@ -7,7 +7,7 @@ Bot programado em elixir para um trabalho de programação funcional
 - !axobotl {pictures|facts} (E)
 - !catfact * (N)
 - !catchcat * (N)
-- !owo {} (E)
+- !define {} (E)
 - !wiki {} (N)
 - !rsits {chinese chatacter} (E)
 - !hello {@} (E)

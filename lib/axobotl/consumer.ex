@@ -12,6 +12,7 @@ defmodule Axobotl.Consumer do
       msg.content == "¡ping" -> Api.create_message(msg.channel_id, "pong!")
       String.starts_with?(msg.content, "¡echo ") -> Echo.handle(msg)
       String.starts_with?(msg.content, "¡axolotl ") -> Axolotl.handle(msg)
+      String.starts_with?(msg.content, "¡define ") -> Define.handle(msg)
       true -> :noop
     end
   end

@@ -3,7 +3,8 @@
                              poison]},
               {description,"axobotl"},
               {modules,['Elixir.Axobotl','Elixir.Axobotl.Application',
-                        'Elixir.Axobotl.Consumer']},
+                        'Elixir.Axobotl.Consumer','Elixir.Axolotl',
+                        'Elixir.Define','Elixir.Echo']},
               {registered,[]},
               {vsn,"0.1.0"},
               {mod,{'Elixir.Axobotl.Application',[]}}]}.
