@@ -15,6 +15,7 @@ defmodule Axobotl.Consumer do
       String.starts_with?(msg.content, "¡define ") -> Define.handle(msg)
       String.starts_with?(msg.content, "¡hanzi ") -> Hanzi.handle(msg)
       String.starts_with?(msg.content, "¡hello") -> Hello.handle(msg)
+      String.starts_with?(msg.content, "¡joke") -> Joke.handle(msg)
       true -> :noop
     end
   end

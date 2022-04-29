@@ -5,7 +5,7 @@
               {modules,['Elixir.Axobotl','Elixir.Axobotl.Application',
                         'Elixir.Axobotl.Consumer','Elixir.Axolotl',
                         'Elixir.Define','Elixir.Echo','Elixir.Hanzi',
-                        'Elixir.Hello']},
+                        'Elixir.Hello','Elixir.Joke']},
               {registered,[]},
               {vsn,"0.1.0"},
               {mod,{'Elixir.Axobotl.Application',[]}}]}.
