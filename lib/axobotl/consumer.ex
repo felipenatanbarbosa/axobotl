@@ -27,6 +27,7 @@ defmodule Axobotl.Consumer do
       # Comandos sem parâmetros
       String.starts_with?(msg.content, "!hello") -> Hello.handle(msg)
       String.starts_with?(msg.content, "!joke") -> Joke.handle(msg)
+      String.starts_with?(msg.content, "!zoo") -> Zoo.handle(msg)
       true -> :noop
     end
   end
