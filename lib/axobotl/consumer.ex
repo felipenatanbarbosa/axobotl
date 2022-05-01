@@ -13,24 +13,25 @@ defmodule Axobotl.Consumer do
       msg.content == "!ping" -> Api.create_message(msg.channel_id, "pong!")
       String.starts_with?(msg.content, "!echo ") -> Echo.handle(msg)
       # Comandos com parâmetros
-      String.starts_with?(msg.content, "!axolotl ") -> Axolotl.handle(msg)
-      String.starts_with?(msg.content, "!define ") -> Define.handle(msg)
-      String.starts_with?(msg.content, "!hanzi ") -> Hanzi.handle(msg)
-      String.starts_with?(msg.content, "!fancyfy ") -> Fancyfy.handle(msg)
-      # Error handling
-      String.starts_with?(msg.content, "!axolotl") -> Api.create_message(msg.channel_id, "O comando \"!axolotl\" precisa de um argumento para funcionar")
-      String.starts_with?(msg.content, "!define") -> Api.create_message(msg.channel_id, "O comando \"!define\" precisa de um argumento para funcionar")
-      String.starts_with?(msg.content, "!hanzi") -> Api.create_message(msg.channel_id, "O comando \"!hanzi\" precisa de um argumento para funcionar")
-      String.starts_with?(msg.content, "!fancyfy") -> Api.create_message(msg.channel_id, "O comando \"!fancyfy\" precisa de um argumento para funcionar")
-      String.starts_with?(msg.content, "!hello ") -> Api.create_message(msg.channel_id, "O comando \"!hello\" não precisa de um argumento para funcionar")
-      String.starts_with?(msg.content, "!joke ") -> Api.create_message(msg.channel_id, "O comando \"!joke\" não precisa de um argumento para funcionar")
+      verify_command(msg.content, "!axolotl") -> Axolotl.handle(msg)
+      verify_command(msg.content, "!define") -> Define.handle(msg)
+      verify_command(msg.content, "!hanzi") -> Hanzi.handle(msg)
+      verify_command(msg.content, "!fancyfy") -> Fancyfy.handle(msg)
       # Comandos sem parâmetros
-      String.starts_with?(msg.content, "!hello") -> Hello.handle(msg)
-      String.starts_with?(msg.content, "!joke") -> Joke.handle(msg)
-      String.starts_with?(msg.content, "!zoo") -> Zoo.handle(msg)
+      verify_command(msg.content, "!hello") -> Hello.handle(msg)
+      verify_command(msg.content, "!joke") -> Joke.handle(msg)
+      verify_command(msg.content, "!zoo") -> Zoo.handle(msg)
       true -> :noop
     end
   end
   def handle_event(_event), do: :noop
+
+  defp verify_command(msg, str) do
+    command = msg
+    |> String.split(" ")
+    |> List.first
+
+    command == str
+  end
 
 end

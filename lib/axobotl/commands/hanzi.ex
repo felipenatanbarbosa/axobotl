@@ -9,6 +9,9 @@ defmodule Hanzi do
       1 ->
         handle_request(msg.channel_id, List.first(args))
 
+      0 ->
+        Api.create_message(msg.channel_id, "O comando precisa de um argumento")
+
       _ ->
         Api.create_message(msg.channel_id, "O comando precisa de *apenas* um argumento")
     end
@@ -21,7 +24,11 @@ defmodule Hanzi do
     |> Map.get(:body)
     |> Poison.decode!
 
-    Api.create_message(channel_id, format_hanzi(map))
+    if map == [] do
+      Api.create_message(channel_id, "Caractere não encontrado")
+    else
+      Api.create_message(channel_id, format_hanzi(map))
+    end
   end
 
   defp format_hanzi([]), do: ""
