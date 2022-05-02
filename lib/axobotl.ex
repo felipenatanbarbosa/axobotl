@@ -1,17 +1,4 @@
 defmodule Axobotl do
-  @moduledoc """
-  Documentation for `Axobotl`.
-  """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Axobotl.hello()
-      :world
-
-  """
   def hello do
     :world
   end
@@ -25,10 +12,15 @@ defmodule Axobotl do
     ⠀⣸⣿⢿⣘⠘⠃⣸⣿⠈⠉⢑⠋⠁⣷⣦⣤⣴⣾⣿⡿⠘⠇⠀⠀⠀
     ⢰⣿⣿⢿⣿⣿⠿⠟⠁⢀⣀⣈⣿⣷⠉⠙⠛⠛⣩⣭⠀⠂⢵⡄⠀⠀
     ⠀⠈⠐⠛⠉⠀⠀⠀⠀⠀⠜⡟⠋⠁⠀⠀⠀⠀⣿⡟⠀⢸⡇⡷⢤⠤
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⢀⣼⡿⠁⢀⣾⣧⠐⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⢀⣼⡿⠁⢀⣾⣧⠀⠀
     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡶⠛⠁⣀⣴⣿⣿⠇⠀⠀⠀
     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⠋⣠⣴⣿⣿⡿⠟⠁⠀⠀⠀⠀
     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣧⡾⠟⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀')
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    Axobotl
+
+    by emanuel & natan
+    
+    ')
   end
 end
