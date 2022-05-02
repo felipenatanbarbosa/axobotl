@@ -1,6 +1,9 @@
 # AxoBotl
 Bot programado em elixir para um trabalho de programação funcional
 
+## Integrantes
+Felipe Natan Barbosa - 2010472  
+Emanuel Leão Sá - 2013359
 
 ## Comandos
 - **!axolotl**
