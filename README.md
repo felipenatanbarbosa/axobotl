@@ -3,7 +3,7 @@ Bot programado em elixir para um trabalho de programação funcional
 
 
 ## Comandos
-- **!axobotl**
+- **!axolotl**
   * Argumentos: "picture" ou "fact"
   * Retorno: Uma imagem (picture) ou um fato (fact) sobre axolotes
 - **!define**
