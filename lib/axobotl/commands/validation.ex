@@ -12,7 +12,7 @@ defmodule Validation do
         handle_request(msg.channel_id, args)
     end
   end
-
+  
   def handle_request(channel_id, number) do
     api_key = Application.get_env(:Validation, :api_key)
     request = "https://phonevalidation.abstractapi.com/v1/?api_key=#{api_key}&phone=#{number}"
@@ -22,8 +22,8 @@ defmodule Validation do
   
     case request["valid"] do
       true  ->
-        Api.create_message(channel_id, 
-        "```Número válido.
+        Api.create_message(channel_id, "```
+        Número válido.
         Número formatado: #{request["format"]["local"]}
         Localização: #{request["location"]}
         Operadora: #{request["carrier"]}```")

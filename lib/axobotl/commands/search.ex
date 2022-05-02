@@ -3,36 +3,29 @@ defmodule Search do
 
   def handle(msg) do
     [_head | args]    = String.split(msg.content, " ", parts: 2)
-    [_head | ammount] = args
 
     case args do
       [] ->
-        Api.create_message(msg.channel_id, "Uso: *!src <query | ammount>*")
+        Api.create_message(msg.channel_id, "Uso: *!src <query>*")
 
       _  ->
-        handle_request(msg.channel_id, args, ammount)
+        handle_request(msg.channel_id, args)
     end
   end
 
-  def handle_request(channel_id, query, ammount \\ 1) do
+  def handle_request(channel_id, query) do
     request = "https://imsea.herokuapp.com/api/1?q=#{query}"
-    |> HTTPoison.get
+    |> HTTPoison.get!
     |> Map.get(:body)
+    |> Poison.decode!
+    |> Map.get("results")
 
     case request do
       [] ->
         Api.create_message(channel_id, "A pesquisa não encontrou nenhuma imagem.")
 
       _  ->
-        handle_query(channel_id, ammount,request["results"])
+        Api.create_message(channel_id, Enum.fetch!(request, Enum.random(0..length(request) - 1)))
     end
   end
-
-  def handle_query(channel_id, ammount, images) do
-    images |> Enum.slice(1..ammount)
-
-    for n <- images, do: Api.create_message(channel_id, n)
-
-  end
-
 end

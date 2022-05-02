@@ -5,7 +5,8 @@
               {modules,['Elixir.Axobotl','Elixir.Axobotl.Application',
                         'Elixir.Axobotl.Consumer','Elixir.Axolotl',
                         'Elixir.Catfact','Elixir.Catservice','Elixir.Echo',
-                        'Elixir.Search','Elixir.Util','Elixir.Validation']},
+                        'Elixir.Search','Elixir.Stalk','Elixir.Util',
+                        'Elixir.Validation']},
               {registered,[]},
               {vsn,"0.1.0"},
               {mod,{'Elixir.Axobotl.Application',[]}}]}.

@@ -17,6 +17,7 @@ defmodule Axobotl.Consumer do
       String.starts_with?(msg.content, "!catchcat") ->  Catservice.handle(msg)
       String.starts_with?(msg.content, "!validate") ->  Validation.handle(msg)
       String.starts_with?(msg.content, "!src")      ->  Search.handle(msg)
+      String.starts_with?(msg.content, "!stalk")    ->  Stalk.handle(msg)
       true -> :noop
     end
   end

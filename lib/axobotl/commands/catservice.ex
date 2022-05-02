@@ -1,6 +1,5 @@
 defmodule Catservice do
   alias Nostrum.Api
-  def base_url do {:ok, "https://cataas.com/cat/gif/says/"} end
 
   def handle(msg) do
     [_ | args] = String.split(msg.content, " ", parts: 2)
