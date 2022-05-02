@@ -25,6 +25,3 @@ axobotl-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
-
-# Configuration file (only has the bot's token)
-/config/config.exs
