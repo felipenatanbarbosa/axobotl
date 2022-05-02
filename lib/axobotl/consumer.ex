@@ -19,8 +19,9 @@ defmodule Axobotl.Consumer do
       String.starts_with?(msg.content, "!src")      ->  Search.handle(msg)
       String.starts_with?(msg.content, "!stalk")    ->  Stalk.handle(msg)
 
+      verify_command(msg.content, "!axolotl")       -> Axolotl.handle(msg)
       verify_command(msg.content, "!fancyfy")       -> Fancyfy.handle(msg)
-      verify_command(msg.content, "!define")        -> Define.handle(msg)
+      verify_command(msg.content, "!define")         -> Define.handle(msg)
       verify_command(msg.content, "!hanzi")         -> Hanzi.handle(msg)
       verify_command(msg.content, "!hello")         -> Hello.handle(msg)
       verify_command(msg.content, "!joke")          -> Joke.handle(msg)
